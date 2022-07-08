@@ -18,6 +18,7 @@
        <tr>
          <th scope="col">Id</th>
          <th scope="col">Titolo</th>
+         <th scope="col">Categoria</th>
          <th scope="col">Azioni</th>
 
        </tr>
@@ -29,6 +30,7 @@
          <tr>
            <th scope="row">{{ $post->id }}</th>
            <td>{{ $post->title }}</td>
+           <td>{{ $post->category ? $post->category->name  : '-'  }}</td>
            <td>
                 <a class="btn btn-success" href="{{ route('admin.posts.show', $post)}}">VEDI</a>
                 <a class="btn btn-warning" href="{{route('admin.posts.edit', $post)}}">MODIFICA</a>
